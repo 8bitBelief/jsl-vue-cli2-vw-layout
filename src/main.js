@@ -3,6 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 
+const vub = require('viewport-units-buggyfill')
+
+window.addEventListener('load', () => {
+  vub.init({ hacks: window.viewportUnitsBuggyfillHacks })
+})
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
